@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  node:
+    build:
+      context: ./
+      dockerfile: Dockerfile.dev
+      args:
+        UID: ${UID}
+        GID: ${GID}
+    environment:
+      HOME: /srv/tmp/home
+    command:
+      - yarn
+      - start
+    volumes:
+      - ./:/srv
