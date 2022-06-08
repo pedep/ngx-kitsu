@@ -3,23 +3,23 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngrx-kitsu": {
+    "ngx-kitsu": {
       "projectType": "library",
-      "root": "projects/ngrx-kitsu",
-      "sourceRoot": "projects/ngrx-kitsu/src",
+      "root": "projects/ngx-kitsu",
+      "sourceRoot": "projects/ngx-kitsu/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/ngrx-kitsu/ng-package.json"
+            "project": "projects/ngx-kitsu/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ngrx-kitsu/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ngx-kitsu/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/ngrx-kitsu/tsconfig.lib.json"
+              "tsConfig": "projects/ngx-kitsu/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -27,13 +27,13 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ngrx-kitsu/src/test.ts",
-            "tsConfig": "projects/ngrx-kitsu/tsconfig.spec.json",
-            "karmaConfig": "projects/ngrx-kitsu/karma.conf.js"
+            "main": "projects/ngx-kitsu/src/test.ts",
+            "tsConfig": "projects/ngx-kitsu/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-kitsu/karma.conf.js"
           }
         }
       }
     }
   },
-  "defaultProject": "ngrx-kitsu"
+  "defaultProject": "ngx-kitsu"
 }

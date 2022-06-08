@@ -1,0 +1,12 @@
+{
+  "name": "ngx-kitsu",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^13.3.0",
+    "@angular/core": "^13.3.0",
+    "kitsu-core": "^10.0.0-alpha.23"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

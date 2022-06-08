@@ -12,9 +12,9 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "paths": {
-      "ngrx-kitsu": [
-        "dist/ngrx-kitsu/ngrx-kitsu",
-        "dist/ngrx-kitsu"
+      "ngx-kitsu": [
+        "dist/ngx-kitsu/ngx-kitsu",
+        "dist/ngx-kitsu"
       ]
     },
     "declaration": false,
