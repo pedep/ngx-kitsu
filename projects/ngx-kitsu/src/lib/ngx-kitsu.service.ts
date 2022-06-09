@@ -34,8 +34,6 @@ export class NgxKitsuService {
   }
 
 
-  public fetch<T = {}>(model: string, options?: RequestOptions & {select: 'meta'}): Observable<any>;
-  public fetch<T = {}>(model: string, options?: RequestOptions & {select: 'data'}): Observable<T>;
   public fetch<T = {}>(model: string, options: RequestOptions = {}): Observable<KitsuResponse<T>> {
     const headers = { ...this.headers, ...options.headers }
     const params = { ...{}, ...options.params }
@@ -156,7 +154,7 @@ export interface NgxKitsuConfiguration {
 
 export interface RequestOptions {
   headers?: { [key: string]: string };
-  params?: { [key: string]: string };
+  params?: { [key: string]: any };
   select?: ResponseSelector;
 }
 
