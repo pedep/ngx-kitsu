@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng build --watch --configuration production --project ngx-kitsu",
-    "build": "ng build",
+    "start": "ng build --watch --project ngx-kitsu",
+    "build": "ng build --project ngx-kitsu",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
