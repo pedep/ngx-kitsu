@@ -6,7 +6,7 @@ import { map, Observable } from 'rxjs';
 import { NGX_KITSU_DEFAULT_CONFIGURATION } from './tokens';
 
 @Injectable()
-export class NgxKitsuService {
+export class NgxKitsuService<S = {}> {
 
   constructor(
     private http: HttpClient,
@@ -34,7 +34,7 @@ export class NgxKitsuService {
   }
 
 
-  public fetch<T = {}>(model: string, options: RequestOptions = {}): Observable<KitsuResponse<T>> {
+  public fetch<T = S>(model: string, options: RequestOptions = {}): Observable<KitsuResponse<T>> {
     const headers = { ...this.headers, ...options.headers }
     const params = new HttpParams({fromString: query({ ...{}, ...options.params })});
 
@@ -49,7 +49,7 @@ export class NgxKitsuService {
     )
   }
 
-  public update<T = {}>(model: string, body: Partial<T>, options: RequestOptions = {}): Observable<KitsuResponse<T>> {
+  public update<T = S>(model: string, body: Partial<T>, options: RequestOptions = {}): Observable<KitsuResponse<T>> {
     const headers = { ...this.headers, ...options.headers }
     const params = new HttpParams({fromString: query({ ...{}, ...options.params })});
 
@@ -68,7 +68,7 @@ export class NgxKitsuService {
     )
   }
 
-  public create<T = {}>(model: string, body: Partial<T>, options: RequestOptions = {}): Observable<KitsuResponse<T>> {
+  public create<T = S>(model: string, body: Partial<T>, options: RequestOptions = {}): Observable<KitsuResponse<T>> {
     const headers = { ...this.headers, ...options.headers }
     const params = new HttpParams({fromString: query({ ...{}, ...options.params })});
 
@@ -87,7 +87,7 @@ export class NgxKitsuService {
     )
   }
 
-  public remove<T = {}>(model: string, id: any, options: RequestOptions = {}): Observable<void> {
+  public remove<T = S>(model: string, id: any, options: RequestOptions = {}): Observable<void> {
     const headers = { ...this.headers, ...options.headers }
     const params = new HttpParams({fromString: query({ ...{}, ...options.params })});
 
