@@ -18,6 +18,7 @@
     "@angular/platform-browser": "~13.3.0",
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
+    "kitsu-core": "^10.0.0-alpha.23",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
@@ -37,6 +38,5 @@
     "ng-packagr": "^13.0.0",
     "typescript": "~4.6.2"
   },
-  "peerDependencies": {
-  }
+  "peerDependencies": {}
 }

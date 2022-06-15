@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 
 import { camel, deserialise, error, kebab, query, serialise, snake, splitModel } from 'kitsu-core'
@@ -36,7 +36,7 @@ export class NgxKitsuService {
 
   public fetch<T = {}>(model: string, options: RequestOptions = {}): Observable<KitsuResponse<T>> {
     const headers = { ...this.headers, ...options.headers }
-    const params = { ...{}, ...options.params }
+    const params = new HttpParams({fromString: query({ ...{}, ...options.params })});
 
     const [ res, id, relationship, subRelationship ] = model.split('/')
     let url = this.pluralize(this.resourceCaseTransform(res))
@@ -51,7 +51,7 @@ export class NgxKitsuService {
 
   public update<T = {}>(model: string, body: Partial<T>, options: RequestOptions = {}): Observable<KitsuResponse<T>> {
     const headers = { ...this.headers, ...options.headers }
-    const params = { ...{}, ...options.params }
+    const params = new HttpParams({fromString: query({ ...{}, ...options.params })});
 
     const [ resourceModel, url ] = splitModel(model, {
       resourceCase: (s: string) => this.resourceCaseTransform(s),
@@ -70,7 +70,7 @@ export class NgxKitsuService {
 
   public create<T = {}>(model: string, body: Partial<T>, options: RequestOptions = {}): Observable<KitsuResponse<T>> {
     const headers = { ...this.headers, ...options.headers }
-    const params = { ...{}, ...options.params }
+    const params = new HttpParams({fromString: query({ ...{}, ...options.params })});
 
     const [ resourceModel, url ] = splitModel(model, {
       resourceCase: (s: string) => this.resourceCaseTransform(s),
@@ -89,7 +89,7 @@ export class NgxKitsuService {
 
   public remove<T = {}>(model: string, id: any, options: RequestOptions = {}): Observable<void> {
     const headers = { ...this.headers, ...options.headers }
-    const params = { ...{}, ...options.params }
+    const params = new HttpParams({fromString: query({ ...{}, ...options.params })});
 
     const [ _resourceModel, url ] = splitModel(model, {
       resourceCase: (s: string) => this.resourceCaseTransform(s),
