@@ -4360,10 +4360,10 @@ kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.3.tgz#07c05034a6c349fa06e24fa35aa76db4580ce4dd"
   integrity sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==
 
-kitsu-core@^10.0.0-alpha.23:
-  version "10.0.0-alpha.23"
-  resolved "https://registry.yarnpkg.com/kitsu-core/-/kitsu-core-10.0.0-alpha.23.tgz#9da57511b62bd8a2206e36c851e1abadee810abc"
-  integrity sha512-J14PGNFkLv7FSmByE7CIcl8pkRuPFlIEMg6fBioj31Q7aefczAA/7i5vOmENMvQwbK6H+Ruwpild684UwgWHFg==
+kitsu-core@^10.0.0-alpha.24:
+  version "10.0.0-alpha.24"
+  resolved "https://registry.yarnpkg.com/kitsu-core/-/kitsu-core-10.0.0-alpha.24.tgz#9b1beea80c0cf3b3dd796b677c50b8fb18eb7bc0"
+  integrity sha512-m3MkPWbJpkT+kPIdj6/2vw9NWBm3C4+uwl/E6a6eYizhWViMZe+5nd8oZ+1B7cQ0wubkGf/SZG9mMWk5H0p0tg==
 
 klona@^2.0.4, klona@^2.0.5:
   version "2.0.5"
