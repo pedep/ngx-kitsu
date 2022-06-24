@@ -63,7 +63,9 @@ export class NgxKitsuService<S = {}> {
       pluralTypes: (s: string) => this.pluralize(s)
     })
 
-    return this.http.patch<{data: T}>(this.requestURL(url), serialData, { headers, params }).pipe(
+    const fullURL = (body as any)?.id ? `${url}/${(body as any).id}` : url
+
+    return this.http.patch<{data: T}>(this.requestURL(fullURL), serialData, { headers, params }).pipe(
       this.transformResponse(options)
     )
   }
