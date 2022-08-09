@@ -20,6 +20,6 @@ jobs:
       - run: yarn install --frozen-lockfile
       - run: yarn build
       - run: cat /home/runner/work/_temp/.npmrc
-      - run: cd dist/ngx-kitsu && npm pack && npm publish *.tar.gz
+      - run: cd dist/ngx-kitsu && npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
