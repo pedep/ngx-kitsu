@@ -70,7 +70,7 @@ export class NgxKitsuService<S = {}> {
     )
   }
 
-  public create<T = S>(model: string, body: Partial<T>, options: RequestOptions = {}): Observable<KitsuResponse<T>> {
+  public create<T = S, U = T>(model: string, body: Partial<T>, options: RequestOptions = {}): Observable<KitsuResponse<U>> {
     const headers = { ...this.headers, ...options.headers }
     const params = new HttpParams({fromString: query({ ...{}, ...options.params })});
 
