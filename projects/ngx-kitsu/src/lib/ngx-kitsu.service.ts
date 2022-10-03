@@ -162,6 +162,7 @@ export interface RequestOptions {
 
 export interface KitsuResponse<T> {
   data: T,
+  links: {[key: string]: string};
   meta?: any;
 }
 

@@ -1,10 +1,10 @@
 {
   "name": "@pedep/ngx-kitsu",
-  "version": "14.1.2",
+  "version": "14.2.0",
   "peerDependencies": {
-    "@angular/common": "^14.1.1",
-    "@angular/core": "^14.1.1",
-    "kitsu-core": "^10.0.1"
+    "@angular/common": "^14.2.0",
+    "@angular/core": "^14.2.0",
+    "kitsu-core": "^10.0.2"
   },
   "dependencies": {
     "tslib": "^2.3.0"
