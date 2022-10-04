@@ -2,7 +2,8 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 
 import { camel, deserialise, error, kebab, query, serialise, snake, splitModel } from 'kitsu-core'
-import { map, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { NGX_KITSU_DEFAULT_CONFIGURATION } from './tokens';
 
 @Injectable()
