@@ -1,6 +1,6 @@
 {
   "name": "@pedep/ngx-kitsu",
-  "version": "14.2.0",
+  "version": "14.2.1",
   "peerDependencies": {
     "@angular/common": "^14.2.0",
     "@angular/core": "^14.2.0",
