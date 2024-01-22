@@ -1,6 +1,7 @@
 {
   "name": "@pedep/ngx-kitsu",
   "version": "0.0.0",
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng build --watch --project ngx-kitsu",
