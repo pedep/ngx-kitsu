@@ -1,5 +1,5 @@
 {
-  "name": "ngx-kitsu",
+  "name": "@pedep/ngx-kitsu",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
