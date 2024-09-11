@@ -90,7 +90,7 @@ export class NgxKitsuService<S = {}> {
     )
   }
 
-  public remove<T = S>(model: string, id: any, options: RequestOptions = {}): Observable<void> {
+  public remove<T = S>(model: string, payload_or_id: any, options: RequestOptions = {}): Observable<void> {
     const headers = { ...this.headers, ...options.headers }
     const params = new HttpParams({fromString: query({ ...{}, ...options.params })});
 
@@ -99,7 +99,17 @@ export class NgxKitsuService<S = {}> {
       pluralModel: (s: string) => this.pluralize(s)
     })
 
-    return this.http.delete<{data: T}>(this.requestURL(`${url}/${id}`), { headers, params }).pipe(
+    let path: string;
+    let body: any;
+    if (typeof payload_or_id === 'string') {
+      path = this.requestURL(`${url}/${payload_or_id}`)
+      body = {id: payload_or_id}
+    } else {
+      path = this.requestURL(url)
+      body = payload_or_id
+    }
+
+    return this.http.delete<{data: T}>(path, { headers, params, body }).pipe(
       this.transformResponse(options)
     )
   }
